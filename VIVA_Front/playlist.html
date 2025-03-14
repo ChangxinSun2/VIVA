@@ -216,7 +216,7 @@
                 const selectedDate = document.getElementById('filter-date').value;
                 const selectedLocation = document.getElementById('filter-location').value;
 
-                let url = "http://127.0.0.1:8000/api/get_shows/?";
+                let url = "https://viva-dgzv.onrender.com/api/get_shows/?";
                 if (selectedDate && selectedDate.trim().length === 10) {
                    url += `date=${selectedDate}&`;
                 }

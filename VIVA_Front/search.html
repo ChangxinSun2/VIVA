@@ -170,7 +170,7 @@
           const query = searchBox.value.trim();
           if (!query) return;
 
-          fetch(`http://127.0.0.1:8000/api/search_show/?q=${encodeURIComponent(query)}`)
+          fetch(`https://viva-dgzv.onrender.com/api/search_show/?q=${encodeURIComponent(query)}`)
             .then(response => response.json())
             .then(data => {
               resultsList.innerHTML = "";

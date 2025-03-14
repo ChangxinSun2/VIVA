@@ -177,7 +177,7 @@
 <!-- Dynamically load the first 8 pictures and jump to the details page -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    fetch("http://127.0.0.1:8000/api/featured_shows/")
+    fetch("https://viva-dgzv.onrender.com/api/featured_shows/")
       .then(res => res.json())
       .then(data => {
         let html = "";

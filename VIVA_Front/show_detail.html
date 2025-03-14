@@ -166,7 +166,7 @@
         let isFavorite = false;
 
         // Loading details
-        fetch(`http://127.0.0.1:8000/api/show_detail/?id=${showId}`)
+        fetch(`https://viva-dgzv.onrender.com/api/show_detail/?id=${showId}`)
           .then(res => res.json())
           .then(data => {
             if (data.error) {
@@ -189,7 +189,7 @@
 
             // After the page is loaded, first determine whether it has been collected
             if (userId && (role === "user" || role === "admin")) {
-              fetch(`http://127.0.0.1:8000/api/check_favorite/?user_id=${userId}&show_id=${showId}`)
+              fetch(`https://viva-dgzv.onrender.com/api/check_favorite/?user_id=${userId}&show_id=${showId}`)
                 .then(res => res.json())
                 .then(favData => {
                   if (favData.favorited) {
@@ -212,7 +212,7 @@
 
               if (!isFavorite) {
                 // Add to favorites
-                fetch("http://127.0.0.1:8000/api/add_favorite/", {
+                fetch("https://viva-dgzv.onrender.com/api/add_favorite/", {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
                   body: JSON.stringify({ user_id: userId, show_id: showId })
@@ -229,7 +229,7 @@
                 });
               } else {
                 // Remove from favorite
-                fetch(`http://127.0.0.1:8000/api/remove_favorite/?user_id=${userId}&show_id=${showId}`, {
+                fetch(`https://viva-dgzv.onrender.com/api/remove_favorite/?user_id=${userId}&show_id=${showId}`, {
                   method: "DELETE"
                 })
                 .then(res => res.json())

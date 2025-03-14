@@ -154,7 +154,7 @@
       }
 
       // Get all performances
-      fetch("http://127.0.0.1:8000/api/get_all_show_details/")
+      fetch("https://viva-dgzv.onrender.com/api/get_all_show_details/")
         .then(res => res.json())
         .then(data => {
           let html = "";
@@ -211,7 +211,7 @@
         description: formData.get('description')
       };
 
-      fetch("http://127.0.0.1:8000/api/update_show/", {
+      fetch("https://viva-dgzv.onrender.com/api/update_show/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -229,7 +229,7 @@
     function deleteShow(showId) {
       if (!confirm("Are you sure you want to delete this performance information?")) return;
 
-      fetch(`http://127.0.0.1:8000/api/delete_show/?s_id=${showId}`, {
+      fetch(`https://viva-dgzv.onrender.com/api/delete_show/?s_id=${showId}`, {
         method: "DELETE"
       })
       .then(res => res.json())
@@ -253,7 +253,7 @@
         description: formData.get('description')
       };
 
-      fetch("http://127.0.0.1:8000/api/create_show/", {
+      fetch("https://viva-dgzv.onrender.com/api/create_show/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
