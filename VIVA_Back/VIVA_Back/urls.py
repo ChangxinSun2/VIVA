@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib import admin
 from myapp.views import (register_user, login_user, reset_password, get_shows, get_show_detail,
                          get_featured_shows, search_show, check_favorite, add_favorite, remove_favorite,
                          get_user_favorites, update_show, delete_show, create_show, get_all_show_details)
@@ -37,5 +38,5 @@ urlpatterns = [
     path('api/delete_show/', delete_show, name='delete_show'),
     path('api/create_show/', create_show, name='create_show'),
     path('api/get_all_show_details/', get_all_show_details, name='get_all_show_details'),
-
+    path('admin/', admin.site.urls),
 ]
