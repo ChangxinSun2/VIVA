@@ -8,3 +8,4 @@ mysqlclient==2.2.7
 packaging==24.2
 PyJWT==2.9.0
 sqlparse==0.5.3
+whitenoise==6.9.0
