@@ -4,6 +4,7 @@ from django.db import models
 from django.db import models
 
 class User(models.Model):
+    verbose_name = "Custom User"
     username = models.CharField(max_length=255, unique=True)
     password = models.CharField(max_length=1024)
     role = models.CharField(max_length=255, default='user')
