@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]>&lt;!&ndash;>
+<html class="no-js" lang="">
+<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        body {
+            background: url('images/banner.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: "Open Sans", Arial, sans-serif;
+            color: #fff;
+        }
+        #header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: transparent;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .header-content {
+            max-width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1;
+            margin-top: -5px;
+        }
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .forgot-container {
+            max-width: 600px;
+            margin: 160px auto 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .forgot-container h2 {
+            margin-bottom: 30px;
+        }
+        .forgot-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            outline: none;
+        }
+        .forgot-input::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .forgot-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            background-color: deeppink;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .forgot-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .forgot-options {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .forgot-options a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-content">
+            <span class="logo"><a href="index.html">VIVA</a></span>
+        </div>
+    </header>
+
+    <section class="forgot-container">
+        <h2 style="color: white">Forgot Password</h2>
+        <input type="text" id="username" class="forgot-input" placeholder="Username">
+        <input type="password" id="password" class="forgot-input" placeholder="New Password">
+        <input type="password" id="password2" class="forgot-input" placeholder="Confirm Password">
+        <button id="forgot-btn" class="forgot-btn">Confirm</button>
+        <div class="forgot-options">
+            <a href="login.html">Already have an account?</a>
+            <a href="register.html">Register</a>
+        </div>
+    </section>
+
+<script>
+    document.getElementById('forgot-btn').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        let password2 = document.getElementById('password2').value;
+
+        if (!username || !password || !password2) {
+            alert("Please fill in all fields!");
+            return;
+        }
+
+        if (password !== password2) {
+            alert("The two passwords do not match!");
+            return;
+        }
+
+        fetch("http://127.0.0.1:8000/api/reset_password/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: username, password: password, password2: password2 })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.message) {
+                alert("Password changed successfully!");
+                window.location.href = "login.html";
+            } else {
+                alert("Modification failed:" + (data.error || "Unknown error"));
+            }
+        })
+        .catch(err => {
+            console.error("Request failed:", err);
+            alert("Request failed");
+        });
+    });
+</script>
+
+</body>
+</html>

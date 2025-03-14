@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]>&lt;!&ndash;>
+<html class="no-js" lang="">
+<![endif]-->
+
+<html lang="en">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+      body {
+        background: url('images/banner.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #fff;
+      }
+      #header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: transparent;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+      .header-content {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin-top: -5px;
+      }
+      .logo a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .login-container {
+        max-width: 500px;
+        margin: 200px auto 0;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        text-align: center;
+      }
+      .login-container h2 {
+        margin-bottom: 30px;
+      }
+      .login-input {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        outline: none;
+      }
+      .login-input::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .login-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background-color: deeppink;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .login-btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      .login-options {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .login-options a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    </style>
+
+
+</head>
+
+<body>
+    <header id="header">
+      <div class="header-content">
+        <span class="logo"><a href="index.html">VIVA</a></span>
+      </div>
+    </header>
+
+    <section class="login-container">
+      <h2 style="color: white">Login</h2>
+      <input type="text" id="login-username" class="login-input" placeholder="Username">
+      <input type="password" id="login-password" class="login-input" placeholder="Password">
+      <p class="error-message" id="login-error-msg"></p>
+      <button id="login-btn" class="login-btn">Login</button>
+      <div class="login-options">
+        <a href="forgot.html">Forgot Password?</a>
+        <a href="register.html">Register</a>
+      </div>
+    </section>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            let username = document.getElementById('login-username').value;
+            let password = document.getElementById('login-password').value;
+
+            if (!username || !password) {
+                document.getElementById('login-error-msg').textContent = "Please enter username and password!";
+                document.getElementById('login-error-msg').style.display = "block";
+                return;
+            }
+
+            fetch("http://127.0.0.1:8000/api/login/", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username: username, password: password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.access_token) {
+
+                    alert("Login successful!");
+                    // Storing tokens and roles
+                    localStorage.setItem("access_token", data.access_token);
+                    localStorage.setItem("role", data.role);  // The backend needs to return the role field
+                    localStorage.setItem("userId", data.user_id);
+
+
+                    // Jump to page based on role
+                    if (data.role === "admin") {
+                        window.location.href = "admin_index.html";
+                        localStorage.setItem("userRole", "admin");
+                    } else if (data.role === "user") {
+                        window.location.href = "user_index.html";
+                        localStorage.setItem("userRole", "user");
+                    } else {
+                        window.location.href = "index.html";  // fallback
+                }
+
+                } else {
+                    document.getElementById('login-error-msg').textContent = data.error || "Login failed!";
+                    document.getElementById('login-error-msg').style.display = "block";
+                }
+            })
+            .catch(error => {
+                document.getElementById('login-error-msg').textContent = "Error: " + error;
+                document.getElementById('login-error-msg').style.display = "block";
+            });
+        });
+    </script>
+
+
+</body>
+</html>
