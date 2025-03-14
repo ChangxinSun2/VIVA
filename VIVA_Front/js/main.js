@@ -10,8 +10,8 @@ $(document).ready(function() {
 		}
 	});
 
-	// Fancybox
-	$('.work-box').fancybox();
+	// // Fancybox
+	// $('.work-box').fancybox();
 
 	// Flexslider
 	$('.flexslider').flexslider({
