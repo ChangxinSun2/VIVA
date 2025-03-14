@@ -136,8 +136,8 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:63342",  # The address where your frontend is running
-    "http://localhost:63342",  # Allow localhost access
+    # "http://127.0.0.1:63342",  # The address where your frontend is running
+    # "http://localhost:63342",  # Allow localhost access
     "https://viva-dgzv.onrender.com",
 ]
 
