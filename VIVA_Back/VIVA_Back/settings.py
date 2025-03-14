@@ -141,4 +141,6 @@ CORS_ALLOWED_ORIGINS = [
     "https://viva-dgzv.onrender.com",
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_CREDENTIALS = True  # Allow cookies (if required)
