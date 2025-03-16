@@ -223,6 +223,7 @@ def update_show(request):
         show.description = description
         show.genre = genre
         show.link = link
+        show.picture = picture
         show.save()
         return Response({"status": "success", "message": "Performance information updated"})
     except Show.DoesNotExist:
