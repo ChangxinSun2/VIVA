@@ -168,7 +168,7 @@
                 <input type="text" name="address" placeholder="Address" value="${escapeHtml(show.address)}" required>
                 <input type="text" name="genre" placeholder="Genre" value="${escapeHtml(show.genre)}">
                 <input type="text" name="link" placeholder="Link" value="${escapeHtml(show.link)}">
-                <input type="text" name="picture" placeholder="Picture">
+                <input type="text" name="picture" placeholder="Picture" value="${escapeHtml(show.picture)}">>
                 <textarea name="description" placeholder="Description">${escapeHtml(show.description || '')}</textarea>
                 <button type="submit">Save changes</button>
                 <button type="button" onclick="deleteShow(${show.s_id})" style="margin-left:10px;">Delete a show</button>
@@ -186,6 +186,7 @@
               <input type="text" name="address" placeholder="Address" required>
               <input type="text" name="genre" placeholder="Genre">
               <input type="text" name="link" placeholder="Link">
+              <input type="text" name="picture" placeholder="Picture">
               <textarea name="description" placeholder="Description"></textarea>
               <button type="submit">Add a show</button>
             </form>
