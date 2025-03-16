@@ -168,6 +168,7 @@
                 <input type="text" name="address" placeholder="Address" value="${escapeHtml(show.address)}" required>
                 <input type="text" name="genre" placeholder="Genre" value="${escapeHtml(show.genre)}">
                 <input type="text" name="link" placeholder="Link" value="${escapeHtml(show.link)}">
+                <input type="text" name="picture" placeholder="Picture">
                 <textarea name="description" placeholder="Description">${escapeHtml(show.description || '')}</textarea>
                 <button type="submit">Save changes</button>
                 <button type="button" onclick="deleteShow(${show.s_id})" style="margin-left:10px;">Delete a show</button>
@@ -208,6 +209,7 @@
         address: formData.get('address'),
         genre: formData.get('genre'),
         link: formData.get('link'),
+        picture: formData.get('picture'),
         description: formData.get('description')
       };
 
@@ -250,6 +252,7 @@
         address: formData.get('address'),
         genre: formData.get('genre'),
         link: formData.get('link'),
+        picture: formData.get('picture'),
         description: formData.get('description')
       };
 

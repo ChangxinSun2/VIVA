@@ -212,6 +212,7 @@ def update_show(request):
     description = request.data.get('description')
     genre = request.data.get('genre')
     link = request.data.get('link')
+    picture = request.data.get('picture')
 
     try:
         show = Show.objects.get(s_id=show_id)
@@ -246,6 +247,7 @@ def create_show(request):
     description = request.data.get('description')
     genre = request.data.get('genre')
     link = request.data.get('link')
+    picture = request.data.get('picture')
 
     show = Show.objects.create(
         s_name=s_name,
@@ -255,7 +257,7 @@ def create_show(request):
         description=description,
         genre=genre,
         link=link,
-        picture="/static/images/default.jpg"
+        picture=picture
     )
     return JsonResponse({'status': 'success', 'message': 'Successfully added performance', 'id': show.s_id})
 

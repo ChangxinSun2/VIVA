@@ -22,7 +22,6 @@ from myapp.views import (register_user, login_user, reset_password, get_shows, g
                          get_user_favorites, update_show, delete_show, create_show, get_all_show_details)
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
     path('api/register/', register_user, name='register'),
     path('api/login/', login_user, name='login'),
     path('api/reset_password/',reset_password, name='reset_password'),
