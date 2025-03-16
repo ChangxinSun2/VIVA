@@ -1,7 +1,10 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]>&lt;!&ndash;>
 <html class="no-js" lang="">
 <![endif]-->
@@ -11,6 +14,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VIVA Home</title>
+
+    <!-- CSS FILES-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -19,213 +24,57 @@
     <link rel="stylesheet" href="css/font-icon.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/user_index.css">
 
-    <!-- JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/retina.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.contact.js"></script>
-    <script type="text/javascript"></script>
-
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 300px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-        .close-btn {
-            position: absolute;
-            right: 15px;
-            top: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
-
-
-      <!-- user_index.html -->
-    <script>
-      const role = localStorage.getItem("userRole");
-      if (role !== "user") {
-        window.location.href = "index.html"; // If you are not a user, return to the home page
-      }
-    </script>
 </head>
 
 <body>
 
 <!-- header section -->
 <section class="banner" role="banner" id="banner">
-  <header id="header">
-    <div class="header-content clearfix"><span class="logo"><a href="index.html">VIVA</a></span>
-      <nav class="navigation" role="navigation">
-        <ul class="primary-nav">
-		  <li><a href="#banner">Home</a></li>
-            <li><a href="#gallery">Shows</a></li>
-            <li><a href="#intro">Showlist</a></li>
-            <li><a href="#services">We Do</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#favorite" id="favorite-btn">Favorite</a></li>
-            <li><a href="#logout" id="logout-btn">Log Out</a></li>
-          <li><a href="search.html"><img src="images/search.png"></a></li>
-        </ul>
-      </nav>
-<!--mobile-->
-      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
-  </header>
+    <header id="header">
+        <div class="header-content clearfix"><span class="logo"><a href="index.html">VIVA</a></span>
+            <nav class="navigation" role="navigation">
+                <ul class="primary-nav">
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="#gallery">Shows</a></li>
+                    <li><a href="#intro">Showlist</a></li>
+                    <li><a href="#services">We Do</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#favorite" id="favorite-btn">Favorite</a></li>
+                    <li><a href="#logout" id="logout-btn">Log Out</a></li>
+                    <li><a href="search.html"><img src="images/search.png"></a></li>
+                </ul>
+            </nav>
+            <!--mobile-->
+            <a href="#" class="nav-toggle">Menu<span></span></a></div>
+    </header>
 
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const logoutBtn = document.getElementById("logout-btn");
-
-    logoutBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      localStorage.clear();
-
-      // Jump back to the home page
-      window.location.href = "index.html";
-    });
-
-    const favoriteBtn = document.getElementById("favorite-btn");
-
-    favoriteBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-
-
-      // Jump back to favorite
-      window.location.href = "favorite.html";
-    });
-
-  });
-  </script>
-
-
-  <!-- banner text -->
-  <div class="container">
-    <div class="col-md-10">
-      <div class="banner-text text-center">
-        <h1>Music World</h1>
-        <p>Hello Welcome To VIVA</p></div>
-      <!-- banner text -->
+    <!-- banner text -->
+    <div class="container">
+        <div class="col-md-10">
+            <div class="banner-text text-center">
+                <h1>Music World</h1>
+                <p>Hello Welcome To VIVA</p></div>
+            <!-- banner text -->
+        </div>
     </div>
-  </div>
 </section>
 <!-- header section -->
 
 <!-- gallery section -->
 <section id="gallery" class="gallery section">
-  <div class="container-fluid">
-    <div class="section-header text-center">
-      <h2 class="wow fadeInDown animated">Events</h2>
-      <p class="wow fadeInDown animated">Recent popular shows</p>
-    </div>
+    <div class="container-fluid">
+        <div class="section-header text-center">
+            <h2 class="wow fadeInDown animated">Events</h2>
+            <p class="wow fadeInDown animated">Recent popular shows</p>
+        </div>
 
-    <div class="row no-gutter" id="dynamic-gallery">
-      <!-- Dynamic loading and insertion of pictures -->
+        <div class="row no-gutter" id="dynamic-gallery">
+            <!-- Dynamic loading and insertion of pictures -->
+        </div>
     </div>
-  </div>
 </section>
-
-<!-- Style control: display all images in a fixed ratio -->
-<style>
-  .gallery-box {
-    width: 100%;
-    aspect-ratio: 4 / 3;     /* Force the image ratio to be fixed to 4:3 */
-    overflow: hidden;
-    border-radius: 6px;
-    background-color: #000;  /* Background fill prevents images from flickering when they are not loaded */
-  }
-
-  .gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;       /* Crop image to fill area */
-    display: block;
-  }
-
-  .work-box {
-    display: block;
-    position: relative;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    transition: 0.3s ease;
-    z-index: 2;
-
-    /* New: Centered content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .overlay-caption {
-    color: #fff;
-    font-size: 28px;
-  }
-
-  .work-box:hover .overlay {
-    opacity: 1;
-  }
-</style>
-
-<!-- Dynamically load the first 8 pictures and jump to the details page -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://viva-dgzv.onrender.com/api/featured_shows/")
-      .then(res => res.json())
-      .then(data => {
-        let html = "";
-        data.forEach(show => {
-          html += `
-            <div class="col-lg-3 col-md-6 col-sm-6 work">
-              <a href="show_detail.html?id=${show.s_id}" class="work-box">
-                <div class="gallery-box">
-                  <img src="${show.picture}" alt="${show.s_name}" class="gallery-image">
-                </div>
-                <div class="overlay">
-                  <div class="overlay-caption">
-                    <p><span class="icon icon-magnifying-glass"></span></p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          `;
-        });
-        document.getElementById("dynamic-gallery").innerHTML = html;
-      })
-      .catch(err => {
-        console.error("Failed to load featured shows:", err);
-      });
-  });
-</script>
 
 <!-- intro section -->
 <section id="intro" class="section intro">
@@ -241,32 +90,36 @@
 
 <!-- services section -->
 <section id="services" class="services service-section">
-  <div class="container">
-  <div class="section-header">
-                <h2 class="wow fadeInDown animated">We Do</h2>
-                <p class="wow fadeInDown animated">We’ve always believed that a gig can change lives. So we created a platform for fans to experience <br> more of the shows they love in the most hassle-free way possible.</p>
+    <div class="container">
+        <div class="section-header">
+            <h2 class="wow fadeInDown animated">We Do</h2>
+            <p class="wow fadeInDown animated">We’ve always believed that a gig can change lives. So we created a
+                platform for fans to experience <br> more of the shows they love in the most hassle-free way possible.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 services text-center"><span class="icon icon-recycle"></span>
+                <div class="services-content">
+                    <h5>LINKS</h5>
+                    <p>After finding a show they like, people can directly access the ticketing platform through our
+                        link.</p>
+                </div>
             </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-recycle"></span>
-        <div class="services-content">
-          <h5>LINKS</h5>
-          <p>After finding a show they like, people can directly access the ticketing platform through our link.</p>
+            <div class="col-md-4 col-sm-6 services text-center"><span class="icon icon-heart"></span>
+                <div class="services-content">
+                    <h5>MY FAVORITE</h5>
+                    <p>After logging in, people can save their favorite shows on this website for easy access next
+                        time.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 services text-center"><span class="icon icon-megaphone"></span>
+                <div class="services-content">
+                    <h5>SHOW SHOWLIST</h5>
+                    <p>We have gathered all the latest show information for music lovers to browse in one place.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-heart"></span>
-        <div class="services-content">
-          <h5>MY FAVORITE</h5>
-          <p>After logging in, people can save their favorite shows on this website for easy access next time.</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
-        <div class="services-content">
-          <h5>SHOW SHOWLIST</h5>
-          <p>We have gathered all the latest show information for music lovers to browse in one place.</p>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 <!-- services section -->
 
@@ -275,14 +128,18 @@
     <div class="container">
         <div class="section-header">
             <h2 class="wow fadeInDown animated">Contact Us</h2>
-            <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget
+                risus vitae massa <br> semper aliquam quis mattis quam.</p>
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 conForm">
                 <form method="post" action="php/contact.php" name="cform" id="cform">
-                    <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." >
-                    <input name="email" id="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." >
-                    <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Message..."></textarea>
+                    <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                           placeholder="Your name...">
+                    <input name="email" id="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr"
+                           placeholder="Email Address...">
+                    <textarea name="comments" id="comments" cols="" rows=""
+                              class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Message..."></textarea>
                     <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
                 </form>
             </div>
@@ -296,70 +153,19 @@
         <p id="modalMessage"></p>
     </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("cform");
-        const modal = document.getElementById("messageModal");
-        const modalMessage = document.getElementById("modalMessage");
-        const closeBtn = document.querySelector(".close-btn");
-
-        modal.style.display = "none";
-
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let message = document.getElementById("comments").value.trim();
-
-            if (name === "") {
-                modalMessage.innerHTML = "❌ Please enter your name.";
-                modal.style.display = "flex";
-                return;
-            }
-
-            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                modalMessage.innerHTML = "❌ Please enter a valid email.";
-                modal.style.display = "flex";
-                return;
-            }
-
-            if (message === "") {
-                modalMessage.innerHTML = "❌ Please enter your message.";
-                modal.style.display = "flex";
-                return;
-            }
-
-            modalMessage.innerHTML = "✅ Message sent successfully!";
-            modal.style.display = "flex";
-
-            setTimeout(() => {
-                modal.style.display = "none";
-                form.reset();
-            }, 5000);
-        });
-
-        closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
-            if (modalMessage.innerHTML.includes("✅")) {
-                form.reset();
-            }
-        });
-
-        window.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-                if (modalMessage.innerHTML.includes("✅")) {
-                    form.reset();
-                }
-            }
-        });
-    });
-</script>
-
 <!-- contact section -->
+
+<!-- JS FILES -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.contact.js"></script>
+<script type="text/javascript"></script>
+<script src="js/user_index.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,149 @@
+body {
+    background: url('../images/banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #fff;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: -5px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    margin-top: 110px;
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 12px;
+}
+
+.filter-section label {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.filter-section input,
+.filter-section select {
+    height: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 5px 30px;
+    color: #000;
+    border: none;
+}
+
+.datepicker-dropdown {
+    z-index: 99999 !important;
+    top: 155px !important;
+}
+
+.datepicker {
+    background-color: #222 !important;
+    color: #fff !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+    color: #fff !important;
+}
+
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.datepicker table tr td:hover,
+.datepicker table tr td.active:hover {
+    background-color: #ff4081 !important;
+    color: #fff !important;
+    border-radius: 50%;
+}
+
+.datepicker table tr td.active {
+    background-color: #ff4081 !important;
+    color: #fff !important;
+    border-radius: 50%;
+}
+
+.datepicker table tr td.today {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+.datepicker .datepicker-switch,
+.datepicker .prev,
+.datepicker .next {
+    color: #fff !important;
+}
+
+.event-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.event-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event-card h3 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.event-card p {
+    margin: 5px 0;
+}

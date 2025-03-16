@@ -1,0 +1,85 @@
+body {
+        background: url('../images/banner.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #fff;
+      }
+      #header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: transparent;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+      .header-content {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin-top: -5px;
+      }
+      .logo a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .login-container {
+        max-width: 500px;
+        margin: 200px auto 0;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        text-align: center;
+      }
+      .login-container h2 {
+        margin-bottom: 30px;
+      }
+      .login-input {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        outline: none;
+      }
+      .login-input::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .login-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background-color: deeppink;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .login-btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      .login-options {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .login-options a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+      }

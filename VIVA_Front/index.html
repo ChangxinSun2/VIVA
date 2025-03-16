@@ -21,63 +21,7 @@
     <link rel="stylesheet" href="css/font-icon.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!-- JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/retina.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.contact.js"></script>
-    <script type="text/javascript"></script>
-
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 300px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-        .close-btn {
-            position: absolute;
-            right: 15px;
-            top: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const role = localStorage.getItem("userRole");
-
-        // Automatically jump to the identity homepage
-        if (role === "admin" && !window.location.href.includes("admin_index")) {
-          window.location.href = "admin_index.html";
-        } else if (role === "user" && !window.location.href.includes("user_index")) {
-          window.location.href = "user_index.html";
-        }
-      });
-    </script>
-
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -125,85 +69,6 @@
     </div>
   </div>
 </section>
-
-<!-- Style control: display all images in a fixed ratio -->
-<style>
-  .gallery-box {
-    width: 100%;
-    aspect-ratio: 4 / 3;     /* Force the image ratio to be fixed to 4:3 */
-    overflow: hidden;
-    border-radius: 6px;
-    background-color: #000;  /* Background fill prevents images from flickering when they are not loaded */
-  }
-
-  .gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;       /* Crop image to fill area */
-    display: block;
-  }
-
-  .work-box {
-    display: block;
-    position: relative;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    transition: 0.3s ease;
-    z-index: 2;
-
-    /* New: Centered content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .overlay-caption {
-    color: #fff;
-    font-size: 28px;
-  }
-
-  .work-box:hover .overlay {
-    opacity: 1;
-  }
-</style>
-
-<!-- Dynamically load the first 8 pictures and jump to the details page -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://viva-dgzv.onrender.com/api/featured_shows/")
-      .then(res => res.json())
-      .then(data => {
-        let html = "";
-        data.forEach(show => {
-          html += `
-            <div class="col-lg-3 col-md-6 col-sm-6 work">
-              <a href="show_detail.html?id=${show.s_id}" class="work-box">
-                <div class="gallery-box">
-                  <img src="${show.picture}" alt="${show.s_name}" class="gallery-image">
-                </div>
-                <div class="overlay">
-                  <div class="overlay-caption">
-                    <p><span class="icon icon-magnifying-glass"></span></p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          `;
-        });
-        document.getElementById("dynamic-gallery").innerHTML = html;
-      })
-      .catch(err => {
-        console.error("Failed to load featured shows:", err);
-      });
-  });
-</script>
 
 <!-- intro section -->
 <section id="intro" class="section intro">
@@ -275,69 +140,18 @@
     </div>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("cform");
-        const modal = document.getElementById("messageModal");
-        const modalMessage = document.getElementById("modalMessage");
-        const closeBtn = document.querySelector(".close-btn");
-
-        modal.style.display = "none";
-
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let message = document.getElementById("comments").value.trim();
-
-            if (name === "") {
-                modalMessage.innerHTML = "❌ Please enter your name.";
-                modal.style.display = "flex";
-                return;
-            }
-
-            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                modalMessage.innerHTML = "❌ Please enter a valid email.";
-                modal.style.display = "flex";
-                return;
-            }
-
-            if (message === "") {
-                modalMessage.innerHTML = "❌ Please enter your message.";
-                modal.style.display = "flex";
-                return;
-            }
-
-            modalMessage.innerHTML = "✅ Message sent successfully!";
-            modal.style.display = "flex";
-
-            setTimeout(() => {
-                modal.style.display = "none";
-                form.reset();
-            }, 5000);
-        });
-
-        closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
-            if (modalMessage.innerHTML.includes("✅")) {
-                form.reset();
-            }
-        });
-
-        window.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-                if (modalMessage.innerHTML.includes("✅")) {
-                    form.reset();
-                }
-            }
-        });
-    });
-</script>
-
 <!-- contact section -->
 
+<!-- JS FILES -->
+    <script src="js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.contact.js"></script>
+    <script type="text/javascript"></script>
 </body>
 </html>

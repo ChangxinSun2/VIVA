@@ -1,0 +1,106 @@
+body {
+    position: relative;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('images/banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: -5px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 140px auto 50px auto;
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.show-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.show-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.show-info {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.show-description {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.ticket-link, .favorite-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-right: 15px;
+}
+
+.ticket-link:hover, .favorite-btn:hover {
+    background-color: #e91e63;
+}
+
+.favorite-btn.active i {
+    color: red;
+}

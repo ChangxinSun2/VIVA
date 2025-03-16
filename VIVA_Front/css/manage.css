@@ -1,0 +1,107 @@
+body {
+      background: url('../images/banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: "Open Sans", Arial, sans-serif;
+      color: #fff;
+    }
+
+    #header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-top: -5px;
+    }
+
+    .logo a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .manage-container {
+      max-width: 1200px;
+      margin: 160px auto 40px;
+      padding: 0 20px;
+    }
+
+    .manage-title {
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .show-form {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .show-form h4 {
+      margin-bottom: 20px;
+    }
+
+
+    /* Input boxes and text fields - Acrylic blur effect */
+    .show-form input,
+    .show-form textarea,
+    .show-form select {
+      background: rgba(255, 255, 255, 0.1); /* translucent */
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px); /* Blurred glass */
+      -webkit-backdrop-filter: blur(10px); /* Safari compatible */
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 15px;
+      width: 100%;
+      font-size: 15px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    /* Highlight when focused */
+    .show-form input:focus,
+    .show-form textarea:focus {
+      border-color: #ff4081;
+      outline: none;
+    }
+
+    /* The button style is also unified and beautified */
+    .show-form button {
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .show-form button:hover {
+      background-color: #e91e63;
+    }
