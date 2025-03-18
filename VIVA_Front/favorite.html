@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Define the character encoding -->
   <meta charset="UTF-8">
+  <!-- Set the page title -->
   <title>My Favorites</title>
+  <!-- Enable responsive design for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Include Bootstrap CSS for responsive layout and styling -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Include your main custom CSS file -->
   <link rel="stylesheet" href="css/main.css">
+  <!-- Include Font Awesome for icon fonts -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Include custom CSS specific to the favorites page -->
   <link rel="stylesheet" href="css/favorite.css">
 </head>
 
 <body>
+  <!-- Header section with site logo and navigation -->
   <header id="header">
     <div class="header-content">
+      <!-- The logo links back to the homepage -->
       <span class="logo"><a href="index.html">VIVA</a></span>
     </div>
   </header>
 
+  <!-- Section that displays the user's favorite shows -->
   <section class="favorites-container">
+    <!-- Section title -->
     <h2 class="title">My Favorite Shows</h2>
+    <!-- Container where favorite show items will be dynamically loaded via JavaScript -->
     <div class="favorites-list" id="favorites-list">
       <!-- The collection content is dynamically loaded by JS -->
     </div>
   </section>
 
+  <!-- Include jQuery library, which is required for the following scripts -->
   <script src="js/jquery.min.js"></script>
+  <!-- Include custom JavaScript that handles the favorite functionality -->
   <script src="js/favorite.js"></script>
-
 </body>
 </html>

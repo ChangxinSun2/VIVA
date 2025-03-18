@@ -5,53 +5,74 @@
 <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]>&lt;!&ndash;>
-<html class="no-js" lang="">
-<![endif]-->
-
+<!--[if gt IE 8]><!-->
 <html lang="en">
+<!--<![endif]-->
 
 <head>
+    <!-- Set character encoding -->
     <meta charset="UTF-8">
+    <!-- Set page title -->
     <title>Register</title>
+    <!-- Ensure proper scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--    CSS FILES-->
+    <!-- CSS FILES -->
+    <!-- Bootstrap for responsive layout -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Flexslider styles (if any slider functionality is used) -->
     <link rel="stylesheet" href="css/flexslider.css">
+    <!-- Fancybox styles for lightbox effects -->
     <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <!-- Main custom styles -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Responsive adjustments -->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Icon fonts (custom icons) -->
     <link rel="stylesheet" href="css/font-icon.css">
+    <!-- Animations -->
     <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Page-specific styles for the register page -->
     <link rel="stylesheet" href="css/register.css">
-
 </head>
 
 <body>
-<header id="header">
-    <div class="header-content">
-        <span class="logo"><a href="index.html">VIVA</a></span>
-    </div>
-</header>
+    <!-- Header section with logo -->
+    <header id="header">
+        <div class="header-content">
+            <!-- Logo linking back to the homepage -->
+            <span class="logo"><a href="index.html">VIVA</a></span>
+        </div>
+    </header>
 
-<section class="register-container">
-    <h2 style="color: white">Register</h2>
-    <input type="text" id="username" class="register-input" placeholder="Username">
-    <input type="password" id="password" class="register-input" placeholder="Password">
-    <input type="password" id="password2" class="register-input" placeholder="Confirm Password">
-    <p class="error-message" id="error-msg"></p>
-    <button id="register-btn" class="register-btn">Register</button>
+    <!-- Main registration container -->
+    <section class="register-container">
+        <!-- Registration page title -->
+        <h2 style="color: white">Register</h2>
+        <!-- Input field for the username -->
+        <input type="text" id="username" class="register-input" placeholder="Username">
+        <!-- Input field for the password -->
+        <input type="password" id="password" class="register-input" placeholder="Password">
+        <!-- Input field for password confirmation -->
+        <input type="password" id="password2" class="register-input" placeholder="Confirm Password">
+        <!-- Paragraph for displaying error messages (e.g., validation errors) -->
+        <p class="error-message" id="error-msg"></p>
+        <!-- Register button to submit registration data -->
+        <button id="register-btn" class="register-btn">Register</button>
 
-    <div class="register-options">
-        <a href="login.html">Already have an account?</a>
-        <a href="forgot.html">Forgot Password?</a>
-    </div>
-</section>
+        <!-- Additional options for users -->
+        <div class="register-options">
+            <!-- Link to the login page for existing users -->
+            <a href="login.html">Already have an account?</a>
+            <!-- Link to the forgot password page -->
+            <a href="forgot.html">Forgot Password?</a>
+        </div>
+    </section>
 
-<!--JS FILES-->
-<script src="js/register.js"></script>
-
+    <!-- JS FILES -->
+    <!-- Custom JavaScript for handling registration logic -->
+    <script src="js/register.js"></script>
 </body>
 </html>

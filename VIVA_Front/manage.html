@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Set character encoding -->
   <meta charset="UTF-8">
+  <!-- Page title -->
   <title>Manage Shows</title>
+  <!-- Responsive meta tag for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/manage.css">
 
+  <!-- Link to Bootstrap CSS for layout and styling -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Link to main custom styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Link to Font Awesome for icon fonts -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Link to custom CSS specific to the Manage Shows page -->
+  <link rel="stylesheet" href="css/manage.css">
 </head>
 <body>
+  <!-- Header section with site logo -->
   <header id="header">
     <div class="header-content">
+      <!-- Logo linking back to the homepage -->
       <span class="logo"><a href="index.html">VIVA</a></span>
     </div>
   </header>
 
+  <!-- Main container for the Manage Shows page -->
   <div class="manage-container">
+    <!-- Title for the page -->
     <h2 class="manage-title">Manage Shows</h2>
+    <!-- Div that will be dynamically filled with show data from the backend -->
     <div id="manage-list">
       <!-- Dynamic filling of backend data -->
     </div>
   </div>
 
-  <!-- JS FILES -->
+  <!-- JavaScript Files -->
+  <!-- Custom script for managing shows (e.g., CRUD operations) -->
   <script src="js/manage.js"></script>
+  <!-- jQuery library (should typically be loaded before custom scripts that depend on it) -->
   <script src="js/jquery.min.js"></script>
-
 </body>
 </html>

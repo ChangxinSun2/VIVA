@@ -10,40 +10,53 @@
 <![endif]-->
 
 <head>
+    <!-- Character encoding for the page -->
     <meta charset="utf-8">
+
+    <!-- For responsive design, ensuring proper scaling on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title of the page displayed in the browser tab -->
     <title>Playlist</title>
 
-    <!--    CSS FILES-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/font-icon.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
-    <link rel="stylesheet" href="css/showlist.css">
+    <!-- CSS files linked for styling the page -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap framework for layout and components -->
+    <link rel="stylesheet" href="css/flexslider.css"> <!-- Flexslider CSS for image sliders -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css"> <!-- Fancybox CSS for modal images or videos -->
+    <link rel="stylesheet" href="css/main.css"> <!-- Main page style -->
+    <link rel="stylesheet" href="css/responsive.css"> <!-- Styles for responsiveness across devices -->
+    <link rel="stylesheet" href="css/font-icon.css"> <!-- For font-based icons -->
+    <link rel="stylesheet" href="css/animate.min.css"> <!-- For animation effects -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- Font Awesome icons for social media and UI elements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"> <!-- Bootstrap Datepicker for date selection -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/> <!-- Fancybox UI for modal display of images/videos -->
+    <link rel="stylesheet" href="css/showlist.css"> <!-- Custom styles for the playlist or event list page -->
 
 </head>
 
 <body>
+
+<!-- Header section with logo linking to the homepage -->
 <header id="header">
     <div class="header-content">
+        <!-- Logo that links to the homepage -->
         <span class="logo"><a href="index.html">VIVA</a></span>
     </div>
 </header>
 
+<!-- Main container for the playlist or event list -->
 <div class="container">
+    <!-- Filter section for filtering events by date and location -->
     <div class="filter-section">
+        <!-- Date filter input, uses Bootstrap Datepicker -->
         <label for="filter-date">Date:</label>
         <input type="text" id="filter-date" placeholder="Select a date">
 
+        <!-- Location filter dropdown for selecting different locations -->
         <label for="filter-location">Location:</label>
         <select id="filter-location">
-            <option value="null">All</option>
+            <option value="null">All</option> <!-- Default option showing all locations -->
+            <!-- List of cities for location filter -->
             <option value="London">London</option>
             <option value="Manchester">Manchester</option>
             <option value="Liverpool">Liverpool</option>
@@ -64,29 +77,28 @@
             <option value="Coventry">Coventry</option>
             <option value="Norwich">Norwich</option>
             <option value="Swansea">Swansea</option>
-
-
         </select>
     </div>
 
+    <!-- Container for the list of events or playlist items -->
     <div id="event-list" class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4"></div>
     </div>
 </div>
 
-<!-- JS FILES -->
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript" src="js/jquery.contact.js"></script>
-<script type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<script src="js/showlist.js"></script>
+<!-- JS files for functionality and interactivity -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> <!-- jQuery library for DOM manipulation -->
+<script src="js/bootstrap.min.js"></script> <!-- Bootstrap JS for interactive components -->
+<script src="js/jquery.flexslider-min.js"></script> <!-- Flexslider JS for image slider functionality -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script> <!-- Fancybox JS for lightbox modal functionality -->
+<script src="js/retina.min.js"></script> <!-- Retina.js for high-resolution images on retina displays -->
+<script src="js/modernizr.js"></script> <!-- Modernizr for detecting HTML5 and CSS3 features -->
+<script src="js/main.js"></script> <!-- Main JavaScript file for additional functionality -->
+<script type="text/javascript" src="js/jquery.contact.js"></script> <!-- Custom contact form script -->
+<script type="text/javascript"></script> <!-- Placeholder for additional JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> <!-- JS for Bootstrap Datepicker functionality -->
+<script src="js/showlist.js"></script> <!-- Custom JavaScript for handling the event list and filtering -->
 
 </body>
 </html>

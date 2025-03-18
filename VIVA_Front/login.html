@@ -2,51 +2,67 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]>&lt;!&ndash;>
-<html class="no-js" lang="">
-<![endif]-->
-
+<!--[if gt IE 8]><!-->
 <html lang="en">
-
-
-
+<!--<![endif]-->
 
 <head>
+    <!-- Meta information -->
     <meta charset="UTF-8">
     <title>Login</title>
+    <!-- Ensures proper scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/font-icon.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/login.css">
 
+    <!-- Link to Bootstrap CSS for layout and responsiveness -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Flexslider CSS for any slider functionality (if used) -->
+    <link rel="stylesheet" href="css/flexslider.css">
+    <!-- Fancybox CSS for lightbox features (if used) -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <!-- Main CSS file for custom styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Responsive CSS adjustments -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Icon font styles -->
+    <link rel="stylesheet" href="css/font-icon.css">
+    <!-- Animation styles -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Font Awesome for additional icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Custom CSS for the login page -->
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
+    <!-- Header section with logo -->
     <header id="header">
       <div class="header-content">
+        <!-- The logo links back to the homepage -->
         <span class="logo"><a href="index.html">VIVA</a></span>
       </div>
     </header>
 
+    <!-- Main login section -->
     <section class="login-container">
+      <!-- Title for the login section -->
       <h2 style="color: white">Login</h2>
+      <!-- Input field for the username -->
       <input type="text" id="login-username" class="login-input" placeholder="Username">
+      <!-- Input field for the password -->
       <input type="password" id="login-password" class="login-input" placeholder="Password">
+      <!-- Placeholder for displaying error messages -->
       <p class="error-message" id="login-error-msg"></p>
+      <!-- Login button to trigger login action -->
       <button id="login-btn" class="login-btn">Login</button>
+      <!-- Options for forgotten password and registration -->
       <div class="login-options">
         <a href="forgot.html">Forgot Password?</a>
         <a href="register.html">Register</a>
       </div>
     </section>
 
-    <!-- JS FILES-->
+    <!-- JS Files -->
+    <!-- Custom JavaScript for handling login functionality -->
     <script src="js/login.js"></script>
 
 </body>

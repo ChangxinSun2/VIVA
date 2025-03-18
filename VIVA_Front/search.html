@@ -12,42 +12,53 @@
 <html lang="en">
 
 <head>
+    <!-- Character set for the page -->
     <meta charset="UTF-8">
-    <title>Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title> <!-- Title of the page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive design -->
 
-    <!--    CSS FILES-->
+    <!-- CSS files linked for styling the page -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/font-icon.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/main.css"> <!-- Main page style -->
+    <link rel="stylesheet" href="css/responsive.css"> <!-- Style for responsiveness -->
+    <link rel="stylesheet" href="css/font-icon.css"> <!-- Font icon style -->
+    <link rel="stylesheet" href="css/animate.min.css"> <!-- Animation effects -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="css/search.css"> <!-- Custom style for the search page -->
 
 </head>
 
 <body>
+
+<!-- Header section of the page -->
 <header id="header">
     <div class="header-content">
+        <!-- Logo that links to the homepage -->
         <span class="logo"><a href="index.html">VIVA</a></span>
     </div>
 </header>
 
+<!-- Main search container -->
 <section class="search-container">
-    <h2 class="wow fadeInDown animated" style="color: white; margin-bottom: 20px;">Search</h2>
+    <h2 class="wow fadeInDown animated" style="color: white; margin-bottom: 20px;">Search</h2> <!-- Search heading with animation -->
+
+    <!-- Search box and button wrapper -->
     <div class="search-box-wrapper">
+        <!-- Input field for search -->
         <input type="text" id="search-box" class="form-control">
+        <!-- Search button with a search icon -->
         <button class="search-btn"><i class="fa fa-search"></i></button>
     </div>
+
+    <!-- List to display search results -->
     <ul id="search-results"></ul>
 </section>
 
-<!--    JS FILES-->
-<script src="js/jquery.min.js"></script>
-<script src="js/search.js"></script>
+<!-- JS files for functionality -->
+<script src="js/jquery.min.js"></script> <!-- jQuery library -->
+<script src="js/search.js"></script> <!-- Custom search functionality script -->
 
 </body>
 

@@ -10,30 +10,37 @@
 <![endif]-->
 
 <head>
+    <!-- Character encoding for the document -->
     <meta charset="utf-8">
+    <!-- Description meta tag, useful for SEO -->
     <meta name="description" content="">
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Page title displayed in the browser tab -->
     <title>VIVA Home</title>
 
-    <!-- CSS FILES-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/font-icon.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/user_index.css">
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap framework for styling and layout -->
+    <link rel="stylesheet" href="css/flexslider.css"> <!-- Flexslider CSS for image carousel functionality -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css"> <!-- Fancybox CSS for lightbox-style image viewing -->
+    <link rel="stylesheet" href="css/main.css"> <!-- Main stylesheet for general page styling -->
+    <link rel="stylesheet" href="css/responsive.css"> <!-- Responsive design stylesheet for mobile-first design -->
+    <link rel="stylesheet" href="css/font-icon.css"> <!-- Font icons stylesheet -->
+    <link rel="stylesheet" href="css/animate.min.css"> <!-- CSS for animations -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- Font Awesome icons for various UI elements -->
+    <link rel="stylesheet" href="css/user_index.css"> <!-- Custom stylesheet for user index page -->
 
 </head>
 
 <body>
 
-<!-- header section -->
+<!-- Header section with navigation -->
 <section class="banner" role="banner" id="banner">
     <header id="header">
-        <div class="header-content clearfix"><span class="logo"><a href="index.html">VIVA</a></span>
+        <div class="header-content clearfix">
+            <!-- Logo that links back to the homepage -->
+            <span class="logo"><a href="index.html">VIVA</a></span>
+            <!-- Navigation menu -->
             <nav class="navigation" role="navigation">
                 <ul class="primary-nav">
                     <li><a href="#banner">Home</a></li>
@@ -46,73 +53,84 @@
                     <li><a href="search.html"><img src="images/search.png"></a></li>
                 </ul>
             </nav>
-            <!--mobile-->
-            <a href="#" class="nav-toggle">Menu<span></span></a></div>
+            <!-- Mobile menu toggle button -->
+            <a href="#" class="nav-toggle">Menu<span></span></a>
+        </div>
     </header>
 
-    <!-- banner text -->
+    <!-- Banner text -->
     <div class="container">
         <div class="col-md-10">
             <div class="banner-text text-center">
                 <h1>Music World</h1>
-                <p>Hello Welcome To VIVA</p></div>
-            <!-- banner text -->
+                <p>Hello Welcome To VIVA</p>
+            </div>
         </div>
     </div>
 </section>
-<!-- header section -->
+<!-- Header section ends -->
 
-<!-- gallery section -->
+<!-- Gallery section for displaying event images -->
 <section id="gallery" class="gallery section">
     <div class="container-fluid">
+        <!-- Section header -->
         <div class="section-header text-center">
             <h2 class="wow fadeInDown animated">Events</h2>
             <p class="wow fadeInDown animated">Recent popular shows</p>
         </div>
 
+        <!-- Dynamic loading area for event images -->
         <div class="row no-gutter" id="dynamic-gallery">
-            <!-- Dynamic loading and insertion of pictures -->
+            <!-- Images will be dynamically inserted here -->
         </div>
     </div>
 </section>
 
-<!-- intro section -->
+<!-- Intro section providing a call to action for users to explore more shows -->
 <section id="intro" class="section intro">
     <div class="container">
         <div class="col-md-8 col-md-offset-2 text-center">
             <h3>View All Music Shows</h3>
             <p>We provide you with all kinds of music show information you want to know. Click to check it out!</p>
+            <!-- Button that redirects to the show list page -->
             <a href="showlist.html" class="btn btn-large">Showlist</a>
         </div>
     </div>
 </section>
-<!-- intro section -->
+<!-- Intro section ends -->
 
-<!-- services section -->
+<!-- Services section describing what the platform offers -->
 <section id="services" class="services service-section">
     <div class="container">
+        <!-- Section header -->
         <div class="section-header">
             <h2 class="wow fadeInDown animated">We Do</h2>
-            <p class="wow fadeInDown animated">We’ve always believed that a gig can change lives. So we created a
-                platform for fans to experience <br> more of the shows they love in the most hassle-free way possible.
+            <p class="wow fadeInDown animated">
+                We’ve always believed that a gig can change lives. So we created a platform for fans to experience <br>
+                more of the shows they love in the most hassle-free way possible.
             </p>
         </div>
+        <!-- Row displaying different services offered by the platform -->
         <div class="row">
-            <div class="col-md-4 col-sm-6 services text-center"><span class="icon icon-recycle"></span>
+            <!-- Service 1: Links to external ticket platforms -->
+            <div class="col-md-4 col-sm-6 services text-center">
+                <span class="icon icon-recycle"></span>
                 <div class="services-content">
                     <h5>LINKS</h5>
-                    <p>After finding a show they like, people can directly access the ticketing platform through our
-                        link.</p>
+                    <p>After finding a show they like, people can directly access the ticketing platform through our link.</p>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 services text-center"><span class="icon icon-heart"></span>
+            <!-- Service 2: Favorite shows -->
+            <div class="col-md-4 col-sm-6 services text-center">
+                <span class="icon icon-heart"></span>
                 <div class="services-content">
                     <h5>MY FAVORITE</h5>
-                    <p>After logging in, people can save their favorite shows on this website for easy access next
-                        time.</p>
+                    <p>After logging in, people can save their favorite shows on this website for easy access next time.</p>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 services text-center"><span class="icon icon-megaphone"></span>
+            <!-- Service 3: Showlist for browsing -->
+            <div class="col-md-4 col-sm-6 services text-center">
+                <span class="icon icon-megaphone"></span>
                 <div class="services-content">
                     <h5>SHOW SHOWLIST</h5>
                     <p>We have gathered all the latest show information for music lovers to browse in one place.</p>
@@ -121,16 +139,18 @@
         </div>
     </div>
 </section>
-<!-- services section -->
+<!-- Services section ends -->
 
-<!-- contact section -->
+<!-- Contact section where users can send inquiries -->
 <section id="contact" class="section">
     <div class="container">
+        <!-- Section header -->
         <div class="section-header">
             <h2 class="wow fadeInDown animated">Contact Us</h2>
             <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget
                 risus vitae massa <br> semper aliquam quis mattis quam.</p>
         </div>
+        <!-- Contact form -->
         <div class="row">
             <div class="col-md-8 col-md-offset-2 conForm">
                 <form method="post" action="php/contact.php" name="cform" id="cform">
@@ -146,26 +166,27 @@
         </div>
     </div>
 </section>
+<!-- Contact section ends -->
 
+<!-- Modal for displaying messages -->
 <div id="messageModal" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <p id="modalMessage"></p>
     </div>
 </div>
-<!-- contact section -->
 
 <!-- JS FILES -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript" src="js/jquery.contact.js"></script>
-<script type="text/javascript"></script>
-<script src="js/user_index.js"></script>
+<script src="js/jquery.min.js"></script> <!-- jQuery library -->
+<script src="js/bootstrap.min.js"></script> <!-- Bootstrap JS for interactive elements -->
+<script src="js/jquery.flexslider-min.js"></script> <!-- Flexslider JS for image slider functionality -->
+<script src="js/jquery.fancybox.pack.js"></script> <!-- Fancybox JS for lightbox functionality -->
+<script src="js/retina.min.js"></script> <!-- Retina.js for displaying high-resolution images -->
+<script src="js/modernizr.js"></script> <!-- Modernizr for feature detection -->
+<script src="js/main.js"></script> <!-- Main JS file for page functionality -->
+<script type="text/javascript" src="js/jquery.contact.js"></script> <!-- Custom JS for handling contact form -->
+<script type="text/javascript"></script> <!-- Placeholder for additional JavaScript -->
+<script src="js/user_index.js"></script> <!-- Custom JS for user index page functionality -->
 
 </body>
 </html>
